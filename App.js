@@ -39,7 +39,7 @@ export default function App() {
                 name="EatScreen"
                 component={EatScreen}
                 options={{
-                  headerShown: false,
+                  headerShown: true,
                 }}
               />
             </Stack.Navigator>
