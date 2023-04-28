@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MapView from "react-native-maps";
 import { useSelector } from "react-redux";
 import tw from "twrnc";

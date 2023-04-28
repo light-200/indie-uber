@@ -39,7 +39,7 @@ export default function RideOptions() {
   const [seletedItem, setSelectedItem] = useState("");
 
   return (
-    <SafeAreaView style={tw`bg-white flex-grow`}>
+    <SafeAreaView style={tw`bg-white flex-1`}>
       <View>
         <View style={tw`px-3 absolute z-1`}>
           <TouchableOpacity
@@ -78,7 +78,12 @@ export default function RideOptions() {
         )}
       />
       <View>
-        <TouchableOpacity style={tw`bg-black text-white p-3 m-1 rounded-sm`}>
+        <TouchableOpacity
+          style={tw`bg-black p-3 m-2 rounded-lg ${
+            seletedItem ? "bg-black text-white" : "bg-gray-500"
+          }`}
+          disabled={seletedItem ? false : true}
+        >
           <Text style={tw`text-white text-center`}>
             Choose {seletedItem?.title}
           </Text>

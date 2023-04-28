@@ -22,7 +22,7 @@ const HomeScreen = () => {
   };
 
   return (
-    <SafeAreaView style={tw`p-2`}>
+    <SafeAreaView style={tw`gap-2 p-2`}>
       <View>
         <Image
           style={{
@@ -33,19 +33,11 @@ const HomeScreen = () => {
           source={uber_logo}
         />
       </View>
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          paddingHorizontal: 2,
-        }}
-      >
-        <TextInput
-          style={tw`bg-gray-100 m-2 p-2 border-2 border-black border-opacity-10 rounded-sm flex-grow`}
-          onChangeText={(text) => setText(text)}
-          value={text}
-        />
-      </View>
+      <TextInput
+        style={tw`bg-gray-100 p-2 border-2 border-black border-opacity-10 rounded-md`}
+        onChangeText={(text) => setText(text)}
+        value={text}
+      />
       <NavOptions handleSetOrigin={handleSetOrigin} />
       <NavFavourites handleLocation={handleSetOrigin} />
     </SafeAreaView>

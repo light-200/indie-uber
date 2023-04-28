@@ -3,9 +3,10 @@ import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import tw from "twrnc";
 import { Button } from "react-native-elements";
-import { useDispatch, useSelector } from "react-redux";
-import { selectDestination, setDestination } from "../slices/navSlice";
+import { useDispatch } from "react-redux";
+import { setDestination } from "../slices/navSlice";
 import NavFavourites from "./NavFavourites";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function NavigateCard() {
   const [destination, setDestinationState] = useState("");
@@ -13,7 +14,7 @@ export default function NavigateCard() {
   const dispatch = useDispatch();
 
   const handleDestination = () => {
-    dispatch(setDestination(destination));
+    destination && dispatch(setDestination(destination));
     navigation.navigate("RideOptionsCard");
   };
 
@@ -24,7 +25,7 @@ export default function NavigateCard() {
   };
 
   return (
-    <View>
+    <SafeAreaView style={tw`flex-grow`}>
       <Text style={tw`p-2 text-center text-lg font-semibold`}>
         Good Morning, Aryan
       </Text>
@@ -38,6 +39,6 @@ export default function NavigateCard() {
         <Button title="Search" onPress={handleDestination} />
       </View>
       <NavFavourites handleLocation={handleFavSelect} />
-    </View>
+    </SafeAreaView>
   );
 }

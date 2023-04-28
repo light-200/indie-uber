@@ -1,4 +1,4 @@
-import { Text, Image, FlatList, TouchableOpacity, View } from "react-native";
+import { Text, Image, FlatList, TouchableOpacity } from "react-native";
 import React from "react";
 import tw from "twrnc";
 import { Icon } from "react-native-elements";
@@ -28,29 +28,27 @@ export default function NavOptions({ handleSetOrigin }) {
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
         <TouchableOpacity
-          style={tw`p-2 bg-gray-100 rounded-lg mr-2`}
+          style={tw`p-2 bg-gray-200 rounded-lg mr-2 shadow-sm h-54`}
           onPress={() => {
             navigation.navigate(item.screen);
             handleSetOrigin();
           }}
         >
-          <View>
-            <Text style={tw`text-lg font-semibold`}>{item.title}</Text>
-            <Image
-              style={{
-                width: 150,
-                height: 100,
-                resizeMode: "contain",
-              }}
-              source={{ uri: item.image }}
-            />
-            <Icon
-              style={tw`p-2 bg-black rounded-full w-10 mt-4`}
-              name="arrowright"
-              color="white"
-              type="antdesign"
-            />
-          </View>
+          <Text style={tw`text-lg font-semibold`}>{item.title}</Text>
+          <Image
+            style={{
+              width: 150,
+              height: 100,
+              resizeMode: "contain",
+            }}
+            source={{ uri: item.image }}
+          />
+          <Icon
+            style={tw`p-2 bg-black rounded-full w-10 mt-4`}
+            name="arrowright"
+            color="white"
+            type="antdesign"
+          />
         </TouchableOpacity>
       )}
     />
