@@ -25,8 +25,8 @@ export default function NavigateCard() {
   };
 
   return (
-    <SafeAreaView style={tw`flex-grow`}>
-      <Text style={tw`p-2 text-center text-lg font-semibold`}>
+    <View style={tw`flex-grow py-4 gap-2`}>
+      <Text style={tw`text-center text-lg font-semibold`}>
         Good Morning, Aryan
       </Text>
       <View style={tw`flex-row items-center gap-2 p-2`}>
@@ -36,9 +36,13 @@ export default function NavigateCard() {
           value={destination}
           onChangeText={(e) => setDestinationState(e)}
         />
-        <Button title="Search" onPress={handleDestination} />
+        <Button
+          title="Search"
+          onPress={handleDestination}
+          buttonStyle={tw`bg-black`}
+        />
       </View>
       <NavFavourites handleLocation={handleFavSelect} />
-    </SafeAreaView>
+    </View>
   );
 }

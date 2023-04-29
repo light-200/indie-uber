@@ -46,18 +46,21 @@ const WelcomeScreen = () => {
         />
       </View>
       <View
-        style={tw`gap-1 justify-center p-2 px-8 w-full max-h-40 bg-gray-100 absolute bottom-0`}
+        style={tw`p-4 px-6 w-full h-50 justify-between bg-gray-100 absolute bottom-0 bg-white shadow-lg rounded-t-2xl`}
       >
-        <Button
-          title="Login"
-          onPress={handleLogin}
-          buttonStyle={tw`bg-black`}
-        />
-        <View style={tw`flex-row items-center gap-1 justify-between`}>
-          <Text style={tw`text-lg mb-5`}>don't have an account yet?</Text>
-          <TouchableOpacity onPress={handleSignup}>
-            <Text style={tw`text-lg mb-5 text-blue-800`}>sign up</Text>
-          </TouchableOpacity>
+        <Text style={tw`text-lg font-semibold mb-8`}>Join the app today</Text>
+        <View>
+          <Button
+            title="Login"
+            onPress={handleLogin}
+            buttonStyle={tw`bg-black mb-2`}
+          />
+          <View style={tw`flex-row items-center gap-1 mb-5`}>
+            <Text style={tw`text-lg`}>don't have an account yet?</Text>
+            <TouchableOpacity onPress={handleSignup}>
+              <Text style={tw`text-lg text-blue-800`}>sign up</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </SafeAreaView>

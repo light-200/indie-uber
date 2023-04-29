@@ -1,5 +1,5 @@
 import React from "react";
-import MapView from "react-native-maps";
+import MapView, { Marker } from "react-native-maps";
 import { useSelector } from "react-redux";
 import tw from "twrnc";
 import { selectDestination, selectOrigin } from "../slices/navSlice";
@@ -21,6 +21,8 @@ export default function Map() {
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       }}
-    />
+    >
+      <Marker coordinate={{ latitude: 28.450627, longitude: -16.263045 }} />
+    </MapView>
   );
 }

@@ -25,7 +25,7 @@ const SignupScreen = () => {
   };
 
   return (
-    <SafeAreaView style={tw`flex-1 bg-white relative`}>
+    <SafeAreaView style={tw`flex-1 bg-gray-100 relative`}>
       <Image
         source={require("../assets/taxi.png")}
         style={[

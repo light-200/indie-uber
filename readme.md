@@ -7,13 +7,20 @@ Indie-Uber is a ride-sharing app that lets you book rides on-demand, just like U
 Here are some screenshots of the Indie-Uber app in action:
 
 <div style="display: flex;">
-  <img src="screenshots/screenshot_1.png" alt="Screenshot 1" style="width: 250px; height: 500px; margin-right: 10px;">
-  <img src="screenshots/screenshot_2.png" alt="Screenshot 2" style="width: 250px; height: 500px; margin-right: 10px;">
-  <img src="screenshots/screenshot_3.png" alt="Screenshot 3" style="width: 250px; height: 500px;">
+  <img src="screenshots/screenshot_1.png" alt="Screenshot 1" style="width: 250px; height: 444.4px; margin-right: 10px;">
+  <img src="screenshots/screenshot_2.png" alt="Screenshot 2" style="width: 250px; height: 444.4px; margin-right: 10px;">
+  <img src="screenshots/screenshot_3.png" alt="Screenshot 3" style="width: 250px; height: 444.4px;">
+</div>
+
+<div style="display: flex; margin-top: 10px">
+  <img src="screenshots/screenshot_4.png" alt="Screenshot 1" style="width: 250px; height: 444.4px; margin-right: 10px;">
+  <img src="screenshots/screenshot_5.png" alt="Screenshot 2" style="width: 250px; height: 444.4px; margin-right: 10px;">
+  <img src="screenshots/screenshot_6.png" alt="Screenshot 3" style="width: 250px; height: 444.4px;">
 </div>
 
 ## Features 🚀
 
+- Login using email and password
 - Book rides on-demand
 - Set select different locations
 - Check the route on the map

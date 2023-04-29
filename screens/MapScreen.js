@@ -17,8 +17,8 @@ export default function MapScreen() {
   const navigation = useNavigation();
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
-      <View style={tw`absolute top-16 left-8 z-1`}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
+      <View style={tw`absolute top-16 left-6 z-1`}>
         <TouchableOpacity
           style={tw`bg-gray-100 p-2 rounded-full shadow-lg`}
           onPress={() => navigation.navigate("Home")}
@@ -51,6 +51,6 @@ export default function MapScreen() {
           />
         </Stack.Navigator>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }

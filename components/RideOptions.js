@@ -80,7 +80,7 @@ export default function RideOptions() {
       <View>
         <TouchableOpacity
           style={tw`bg-black p-3 m-2 rounded-lg ${
-            seletedItem ? "bg-black text-white" : "bg-gray-500"
+            !seletedItem && "bg-gray-500"
           }`}
           disabled={seletedItem ? false : true}
         >
