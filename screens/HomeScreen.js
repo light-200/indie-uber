@@ -8,6 +8,9 @@ import tw from "twrnc";
 import { useDispatch } from "react-redux";
 import { setDestination, setOrigin } from "../slices/navSlice";
 import NavFavourites from "../components/NavFavourites";
+import { Icon } from "react-native-elements";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { auth } from "../config/firebase";
 
 const HomeScreen = () => {
   const [text, setText] = useState(" ");
@@ -21,17 +24,24 @@ const HomeScreen = () => {
     dispatch(setDestination(null));
   };
 
+  const handleSignOut = () => {
+    auth.signOut();
+  };
+
   return (
     <SafeAreaView style={tw`gap-2 p-2`}>
-      <View>
+      <View style={tw`flex-row justify-between items-center`}>
         <Image
           style={{
-            width: 80,
-            height: 80,
+            width: 120,
+            height: 50,
             resizeMode: "contain",
           }}
           source={uber_logo}
         />
+        <TouchableOpacity onPress={handleSignOut}>
+          <Icon name="logout" type="antdesign" style={tw`mr-2`} />
+        </TouchableOpacity>
       </View>
       <TextInput
         style={tw`bg-gray-100 p-2 border-2 border-black border-opacity-10 rounded-md`}
